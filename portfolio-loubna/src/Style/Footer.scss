@@ -1,0 +1,33 @@
+footer {
+    background: #222; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 20px; /* Ajoute de l'espace autour du contenu */
+    text-align: center; /* Centre le contenu */
+  
+    ul {
+      display: flex;
+      justify-content: center; /* Centre la liste */
+      list-style: none; /* Supprime les puces */
+      margin: 0;
+      padding: 0;
+  
+      li {
+        margin: 0 15px; /* Espacement entre les liens */
+  
+        a {
+          color: white; /* Couleur des liens */
+          text-decoration: none; /* Supprime le soulignement */
+  
+          &:hover {
+            text-decoration: underline; /* Ajoute un soulignement au survol */
+          }
+        }
+      }
+    }
+  
+    p {
+      margin-top: 15px; /* Ajoute un espacement au-dessus du copyright */
+      font-size: 0.9rem; /* Réduit la taille du texte */
+    }
+  }
+  

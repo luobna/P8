@@ -1,0 +1,45 @@
+.home {
+    position: relative;
+    height: 100vh; /* Utiliser toute la hauteur de l'écran */
+    width: 100%; /* Prendre toute la largeur */
+    overflow: hidden; /* Empêcher tout débordement */
+  }
+  
+  .background {
+    background-image: url("../assets/images/photoplan.jpg"); /* Chemin de l'image */
+    background-size: cover; /* L'image couvre toute la taille de l'écran */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+    height: 100%; /* Prendre toute la hauteur */
+    width: 100%; /* Prendre toute la largeur */
+    position: absolute; /* Positionner l'image en arrière-plan */
+    top: 0; /* En haut de la page */
+    left: 0; /* À gauche de la page */
+    z-index: -1; /* Placer l'image derrière le contenu */
+  }
+  
+  .content {
+    position: relative; /* Placer le contenu au-dessus de l'image */
+    z-index: 1; /* Assurer que le contenu est au-dessus de l'image */
+    text-align: center;
+    color: white; /* Texte en blanc */
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+  
