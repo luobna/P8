@@ -14,6 +14,12 @@ const Footer = () => (
       <li>
         <Link to="/projects">Projets</Link>
       </li>
+      <li>
+        <Link to="/compétences">Compétences</Link>
+      </li>
+      <li>
+        <Link to="/contact">Contact</Link>
+      </li>
     </ul>
     <p>&copy; 2024 - Mon Portfolio</p> {/* Ajoute un message de copyright */}
   </footer>

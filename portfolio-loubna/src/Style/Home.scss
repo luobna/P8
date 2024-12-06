@@ -16,6 +16,11 @@
     top: 0; /* En haut de la page */
     left: 0; /* À gauche de la page */
     z-index: -1; /* Placer l'image derrière le contenu */
+
+    filter: none;
+    opacity: 1;
+      filter: contrast(1.1); /* Améliore légèrement le contraste */
+
   }
   
   .content {
@@ -27,19 +32,60 @@
   
   h1 {
     font-size: 2.5rem;
-    color: black;
+    color: aliceblue;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
   p {
-    font-size: 1.2rem;
     font-family: 'Times New Roman', Times, serif;
+    text-align: center; /* Centrer le texte */
+    color: #f1f1f1; /* Couleur claire pour contraster avec le fond */
+    font-size: 1.2rem; /* Taille de police adaptée */
+    font-weight: 400; /* Légèrement en gras pour une meilleure lisibilité */
+    line-height: 1.8; /* Espacement entre les lignes */
+    margin: 20px auto; /* Espacement en haut et en bas */
+    width: 80%; /* Réduction de la largeur pour une meilleure lecture */
+    background-color: black; /* Fond semi-transparent */
+    padding: 15px 20px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre subtile */
   }
   
   .profile-photo {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 190px;
     border-radius: 50%;
     margin-top: 20px;
   }
+
+
+
+
+
+  /* CSS global pour html et body */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Conteneur principal de l'application */
+.page {
+  min-height: 100vh; /* Le contenu doit au moins remplir toute la hauteur de l'écran */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Le conteneur pour Routes doit grandir si nécessaire */
+.page main {
+  flex: 1; /* Permet au contenu de prendre tout l'espace restant */
+}
+
+/* Footer reste en bas */
+footer {
+  margin-top: auto; /* Positionne le footer en bas */
+}
+
   

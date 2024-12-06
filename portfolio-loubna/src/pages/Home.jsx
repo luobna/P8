@@ -1,6 +1,8 @@
 import React from "react";
 import photoProfil from "../assets/images/logo.png"; // Importation de l'image
 import "../Style/Home.scss"; // Importation du fichier SCSS
+import AboutMe from "../components/AboutMe"; // Chemin vers le composant
+
 
 const Home = () => (
   <div className="home">
@@ -8,7 +10,8 @@ const Home = () => (
     <div className="content">
       <h1>Bienvenue sur mon portfolio</h1>
       <img src={photoProfil} alt="logo" className="profile-photo" />
-      <p>Je suis Loubna, développeuse web passionnée...</p>
+       {/* Appel du composant AboutMe */}
+       <AboutMe />
     </div>
   </div>
 );
