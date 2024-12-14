@@ -6,7 +6,7 @@ import AboutMe from "../components/AboutMe"; // Chemin vers le composant
 
 const Home = () => (
   <div className="home">
-    <div className="background"></div> {/* L'image de fond */}
+    <div className="backgroundHome"></div> {/* L'image de fond */}
     <div className="content">
       <h1>Bienvenue sur mon portfolio</h1>
       <img src={photoProfil} alt="logo" className="profile-photo" />

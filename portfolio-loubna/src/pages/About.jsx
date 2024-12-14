@@ -2,7 +2,9 @@ import React from "react";
 import "../Style/About.scss"; // Importation du fichier SCSS
 
 const About = () => (
+  <div className="other-pages">
   <div className="about">
+    
     <h1>À propos de moi</h1>
     <p>
     Je suis une personne polyvalente, passionnée par le développement et toujours en quête d'excellence.
@@ -12,6 +14,7 @@ Mon approche se distingue par mon attention aux détails et ma capacité à gér
 
 Je m'efforce d'être un membre clé de chaque équipe avec laquelle je collabore, en contribuant de manière significative à la réussite des projets. Mon objectif est de produire un travail de qualité, en apportant des idées innovantes sans imposer mes choix, pour un développement harmonieux et efficace.</p>
   
+  </div>
   </div>
 );
 

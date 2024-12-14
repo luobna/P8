@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import "../Style/ContactForm.scss";
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
@@ -39,6 +39,7 @@ const ContactForm = () => {
   };
 
   return (
+    <div className="other-pages">
     <div className="contact-form">
       <h2>Contactez-moi</h2>
       {status && <p className="status">{status}</p>}
@@ -78,6 +79,7 @@ const ContactForm = () => {
         </div>
         <button type="submit">Envoyer</button>
       </form>
+    </div>
     </div>
   );
 };

@@ -5,8 +5,8 @@
     overflow: hidden; /* Empêcher tout débordement */
   }
   
-  .background {
-    background-image: url("../assets/images/photoplan.jpg"); /* Chemin de l'image */
+  .backgroundHome {
+    background-image: url("../assets/images/img.jpg"); /* Chemin de l'image */
     background-size: cover; /* L'image couvre toute la taille de l'écran */
     background-position: center; /* Centrer l'image */
     background-repeat: no-repeat; /* Empêcher la répétition de l'image */
@@ -32,7 +32,7 @@
   
   h1 {
     font-size: 2.5rem;
-    color: aliceblue;
+    color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
@@ -47,7 +47,7 @@
     width: 80%; /* Réduction de la largeur pour une meilleure lecture */
     background-color: black; /* Fond semi-transparent */
     padding: 15px 20px; /* Espacement interne */
-    border-radius: 10px; /* Coins arrondis */
+    border-radius: 30px; /* Coins arrondis */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre subtile */
   }
   

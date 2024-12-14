@@ -1,21 +1,26 @@
 import React from "react";
-import "../Style/Projects.scss"; // Importation du fichier SCSS
+import projects from "../data/projectsData"; // Importation des données des projets
+import "../Style/Projects.scss"
 
-const Projects = () => (
-  <div className="projects">
-    <h1>Mes Projets</h1>
-    <p>Voici quelques projets sur lesquels j'ai travaillé :</p>
-    <ul>
-      <li>
-        <h2>Projet 1 : Nom du projet</h2>
-        <p>Description du projet, problèmes rencontrés, et compétences développées.</p>
-      </li>
-      <li>
-        <h2>Projet 2 : Nom du projet</h2>
-        <p>Description du projet, problèmes rencontrés, et compétences développées.</p>
-      </li>
-    </ul>
-  </div>
-);
+const ProjectsPage = () => {
+  return (
 
-export default Projects;
+    <div className="projects">
+      <h1>Mes Projets</h1>
+      {projects.map((project, index) => (
+        <div key={index} className="project-card">
+          <h3>{project.title}</h3>
+          <img src={project.img} alt={`Illustration de ${project.title}`} />
+          <p>{project.description}</p>
+          <p><strong>Date :</strong> {project.date}</p>
+          <p><strong>Mots-clés :</strong> {project.keywords.join(", ")}</p>
+          <a href={project.url} target="_blank" rel="noopener noreferrer">
+            Voir le projet
+          </a>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default ProjectsPage;
