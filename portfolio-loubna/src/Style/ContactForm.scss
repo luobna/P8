@@ -1,71 +1,128 @@
 .contact-form {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 35px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
-    h2 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 20px;
-    }
-  
-    .status {
-      text-align: center;
-      color: white;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-  
-    form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 35px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .status {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .form-group {
       display: flex;
       flex-direction: column;
-      gap: 15px;
-  
-      .form-group {
-        display: flex;
-        flex-direction: column;
-  
-        label {
-          font-size: 16px;
-          color: #555;
-          margin-bottom: 5px;
-        }
-  
-        input,
-        textarea {
-          padding: 10px;
-          font-size: 14px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          outline: none;
-  
-          &:focus {
-            border-color: #007bff;
-          }
-        }
-  
-        textarea {
-          resize: vertical;
+
+      label {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 5px;
+      }
+
+      input,
+      textarea {
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        outline: none;
+
+        &:focus {
+          border-color: #007bff;
         }
       }
-  
-      button {
-        padding: 10px 15px;
-        font-size: 16px;
-        color: #fff;
-        background-color: #007bff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-  
-        &:hover {
-          background-color: #0056b3;
-        }
+
+      textarea {
+        resize: vertical;
+      }
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #0056b3;
       }
     }
   }
-  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 15px;
+    max-width: 90%; /* Réduit la largeur maximale pour s'adapter */
+  }
+
+  form {
+    gap: 10px; /* Réduit l'espacement entre les champs */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Taille réduite pour le titre */
+  }
+
+  .form-group label {
+    font-size: 14px; /* Texte légèrement plus petit */
+  }
+
+  input,
+  textarea {
+    font-size: 14px; /* Réduction de la taille des champs */
+    padding: 8px; /* Espacement interne réduit */
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 12px; /* Taille du bouton plus petite */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 10px;
+    border-radius: 20px; /* Bordure plus petite pour les très petits écrans */
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  form {
+    gap: 8px;
+  }
+
+  input,
+  textarea {
+    font-size: 12px;
+    padding: 6px; /* Réduction supplémentaire de l'espacement interne */
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}

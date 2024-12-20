@@ -1,26 +1,99 @@
 .about {
-    h1 {
-      font-size: 2.5rem;
-      color:white;
-      text-align: center;
-      margin-top: 5px;
-    }
-  
-    p, ul {
-      font-size: 1.2rem;
-      color: white;
-      margin-top: 145px;
-      border-radius: 30px;
+  display: flex;
+  flex-direction: column; /* Organisation verticale par défaut */
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
 
-    }
-  
-    ul {
-      list-style: square;
-      margin-left: 20px;
-    }
-  
-    li {
-      margin-bottom: 10px;
-    }
+  h1 {
+    font-size: 2.5rem;
+    color: black;
+    text-align: center;
+    margin-top: 5px;
   }
-  
+
+  .myPhoto {
+    width: 200px;
+    height: 190px;
+    border-radius: 50%;
+    margin-top: 20px;
+    object-fit: cover;
+  }
+
+  p,
+  .background-about {
+    width: 52%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  p,
+  ul {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 75px;
+    border-radius: 30px;
+  }
+
+  ul {
+    list-style: square;
+    margin-left: 20px;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem; /* Réduit légèrement la taille du titre */
+  }
+
+  .myPhoto {
+    width: 150px; /* Réduit la taille de l'image */
+    height: 140px;
+  }
+
+  p,
+  .background-about {
+    width: 75%; /* Augmente la largeur pour occuper plus d'espace */
+  }
+
+  p,
+  ul {
+    font-size: 1rem; /* Réduit légèrement la taille du texte */
+    margin-top: 50px; /* Réduit l'espacement vertical */
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Réduit davantage la taille du titre */
+  }
+
+  .myPhoto {
+    width: 120px; /* Réduction encore plus importante pour les petits écrans */
+    height: 110px;
+  }
+
+  p,
+  .background-about {
+    width: 90%; /* Occupe presque toute la largeur de l'écran */
+  }
+
+  p,
+  ul {
+    font-size: 0.9rem; /* Taille encore réduite pour les petits écrans */
+    margin-top: 30px;
+  }
+}

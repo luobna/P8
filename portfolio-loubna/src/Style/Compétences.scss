@@ -1,39 +1,95 @@
 .skills {
-    text-align: center;
-    padding: 20px;
-    color: #fff;
-  
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: black;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); // Par défaut 5 colonnes
+    gap: 20px;
+    justify-items: center;
+
+    @media (max-width: 1024px) { // Pour tablettes
+      grid-template-columns: repeat(3, 1fr); // 3 colonnes
     }
-  
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
-      justify-items: center;
+
+    @media (max-width: 768px) { // Pour mobiles
+      grid-template-columns: repeat(2, 1fr); // 2 colonnes
     }
-  
-    .skill-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-radius: 10px;
-      padding: 10px;
-      width: 150px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  
-      .skill-icon {
-        width: 100px;
-        height: 95px;
-        margin-bottom: 10px;
-      }
-  
-      p {
-        font-size: 1rem;
-        margin: 5px 0;
-      }
+
+    @media (max-width: 480px) { // Très petits écrans
+      grid-template-columns: 1fr; // 1 colonne
     }
   }
-  
+
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background: white;
+
+    .tooltip-container {
+      position: relative;
+
+      .skill-icon {
+        width: 100px;
+        height: 80px;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.1); // Effet zoom au survol
+        }
+      }
+
+      .tooltip {
+        visibility: hidden;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px 10px;
+
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        white-space: normal;
+        width: 150px;
+        max-width: 200px;
+        word-wrap: break-word;
+        font-size: 0.9rem;
+        opacity: 0;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        z-index: 10;
+      }
+
+      .tooltip-container:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      &:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 5px 0;
+    }
+  }
+}

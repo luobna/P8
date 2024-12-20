@@ -1,33 +1,56 @@
 footer {
-    background: black; /* Couleur de fond */
-    color: white; /* Couleur du texte */
-    padding: 20px; /* Ajoute de l'espace autour du contenu */
-    text-align: center; /* Centre le contenu */
-  
-    ul {
-      display: flex;
-      justify-content: center; /* Centre la liste */
-      list-style: none; /* Supprime les puces */
-      margin: 0;
-      padding: 0;
-  
-      li {
-        margin: 0 15px; /* Espacement entre les liens */
-  
-        a {
-          color: white; /* Couleur des liens */
-          text-decoration: none; /* Supprime le soulignement */
-  
-          &:hover {
-            text-decoration: underline; /* Ajoute un soulignement au survol */
-          }
+  background: black; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 20px; /* Ajoute de l'espace autour du contenu */
+  text-align: center; /* Centre le contenu */
+
+  ul {
+    display: flex;
+    flex-direction: column; /* Change l'alignement en colonne */
+    justify-content: center; /* Centre la liste */
+    list-style: none; /* Supprime les puces */
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 10px 0; /* Ajoute un espacement vertical entre les liens */
+
+      a {
+        color: white; /* Couleur des liens */
+        text-decoration: none; /* Supprime le soulignement */
+
+        &:hover {
+          text-decoration: underline; /* Ajoute un soulignement au survol */
         }
       }
     }
-  
-    p {
-      margin-top: 15px; /* Ajoute un espacement au-dessus du copyright */
-      font-size: 0.9rem; /* Réduit la taille du texte */
+  }
+
+  p {
+    margin-top: 15px; /* Ajoute un espacement au-dessus du copyright */
+    font-size: 0.9rem; /* Réduit la taille du texte */
+  }
+
+  /* Styles responsives */
+  @media (max-width: 768px) {
+    ul {
+      gap: 10px; /* Ajoute de l'espace entre les liens */
+    }
+
+    li {
+      margin: 10px 0; /* Espacement vertical */
     }
   }
-  
+
+  @media (max-width: 480px) {
+    padding: 15px; /* Réduit le padding général */
+    
+    ul {
+      gap: 5px; /* Moins d'espace entre les liens */
+    }
+
+    p {
+      font-size: 0.8rem; /* Réduit encore la taille du texte pour les petits écrans */
+    }
+  }
+}

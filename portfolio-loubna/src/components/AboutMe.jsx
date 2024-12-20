@@ -5,11 +5,11 @@ function AboutMe() {
   return (
     <div className="about-me">
       <p>
-        Je suis <strong>Loubna</strong>, développeuse web passionnée par le développement web. 
+        Je suis <strong>Loubna</strong>, développeuse web passionnée par le développement web.<br />
         J’ai acquis des compétences solides en création d’interfaces dynamiques avec 
         <strong> React</strong>, en développement d’APIs robustes avec <strong>Node.js</strong>, 
-        et en gestion de projets numériques. Mon parcours inclut la réalisation de projets variés, 
-        allant de sites vitrines interactifs à des applications web complètes. Organisée et curieuse, 
+        et en gestion de projets numériques. <br />Mon parcours inclut la réalisation de projets variés, 
+        allant de sites vitrines interactifs à des applications web complètes. <br />Organisée et curieuse, 
         je m’engage à livrer des solutions performantes et adaptées aux besoins des utilisateurs.
       </p>
       <p className="cv-link">

@@ -1,7 +1,17 @@
 .other-pages {
-    background-image: url("../assets/images/img2.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-  }
+  background-image: url("../assets/images/img2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative; /* Assure que l'espace reste bien organisé */
+}
+
+.wrapper {
+  padding-top: 80px; /* Espace en haut pour éviter qu'il soit collé */
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement si besoin */
+}

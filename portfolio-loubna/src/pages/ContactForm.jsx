@@ -40,6 +40,7 @@ const ContactForm = () => {
 
   return (
     <div className="other-pages">
+      <div class="wrapper">
     <div className="contact-form">
       <h2>Contactez-moi</h2>
       {status && <p className="status">{status}</p>}
@@ -79,6 +80,7 @@ const ContactForm = () => {
         </div>
         <button type="submit">Envoyer</button>
       </form>
+    </div>
     </div>
     </div>
   );

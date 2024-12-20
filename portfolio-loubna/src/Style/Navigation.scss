@@ -1,26 +1,39 @@
 nav {
-    background: black; /* Couleur de fond du header */
-    padding: 10px; /* Espace autour du contenu */
-  
-    ul {
-      display: flex;
-      justify-content: flex-end;
-      list-style: none; /* Supprime les puces */
-      margin: 0;
-      padding: 30px;
-  
-      li {
-        margin-right: 15px; /* Espacement entre les éléments */
-  
-        a {
-          color: white; /* Couleur du texte */
-          text-decoration: none; /* Supprime le soulignement */
-  
-          &:hover {
-            text-decoration: underline; /* Ajoute un soulignement au survol */
-          }
+  background: black; /* Couleur de fond du header */
+  padding: 10px; /* Espace autour du contenu */
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none; /* Supprime les puces */
+    margin: 0;
+    padding: 30px;
+
+    li {
+      margin-right: 15px; /* Espacement entre les éléments */
+
+      a {
+        color: white; /* Couleur du texte */
+        text-decoration: none; /* Supprime le soulignement */
+
+        &:hover {
+          text-decoration: underline; /* Ajoute un soulignement au survol */
         }
       }
     }
   }
-  
+
+  /* Styles responsives */
+  @media (max-width: 768px) {
+    ul {
+      flex-direction: column; /* Empile les éléments verticalement */
+      justify-content: center;
+      align-items: center; /* Centre le menu */
+      padding: 0;
+
+      li {
+        margin: 10px 0; /* Espacement vertical entre les éléments */
+      }
+    }
+  }
+}
