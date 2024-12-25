@@ -6,18 +6,19 @@ footer {
 
   ul {
     display: flex;
-    flex-direction: column; /* Change l'alignement en colonne */
+    flex-direction: row; /* Par défaut, en ligne pour desktop */
     justify-content: center; /* Centre la liste */
     list-style: none; /* Supprime les puces */
     margin: 0;
     padding: 0;
 
     li {
-      margin: 10px 0; /* Ajoute un espacement vertical entre les liens */
+      margin: 0 15px; /* Ajoute de l'espacement horizontal pour desktop */
 
       a {
         color: white; /* Couleur des liens */
         text-decoration: none; /* Supprime le soulignement */
+        font-size: 20px; /* Taille des liens pour desktop */
 
         &:hover {
           text-decoration: underline; /* Ajoute un soulignement au survol */
@@ -30,27 +31,50 @@ footer {
     margin-top: 15px; /* Ajoute un espacement au-dessus du copyright */
     font-size: 0.9rem; /* Réduit la taille du texte */
   }
+}
 
-  /* Styles responsives */
-  @media (max-width: 768px) {
+/* Styles responsives */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px; /* Garde le padding modéré pour tablette */
     ul {
+      flex-direction: column; /* Passe les liens en colonne */
       gap: 10px; /* Ajoute de l'espace entre les liens */
-    }
-
-    li {
-      margin: 10px 0; /* Espacement vertical */
+      margin: 0; /* Supprime les marges */
     }
   }
 
-  @media (max-width: 480px) {
+
+
+  li {
+    margin: 10px 0; /* Espacement vertical pour chaque lien */
+  }
+
+  a {
+    font-size: 14px; /* Taille des liens réduite pour tablette */
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
     padding: 15px; /* Réduit le padding général */
     
-    ul {
-      gap: 5px; /* Moins d'espace entre les liens */
-    }
+  ul {
+    gap: 5px; /* Moins d'espace entre les liens */
+    flex-direction: column;
+  }
 
-    p {
-      font-size: 0.8rem; /* Réduit encore la taille du texte pour les petits écrans */
-    }
+  }
+
+  li {
+    margin: 8px 0; /* Réduction de l'espacement pour petits écrans */
+  }
+
+  a {
+    font-size: 10px; /* Taille des liens encore réduite pour mobile */
+  }
+
+  p {
+    font-size: 0.8rem; /* Réduit encore la taille du texte pour les petits écrans */
   }
 }

@@ -13,7 +13,16 @@ body {
   padding: 0 20px;
   text-align: center;
 }
-
+.titre1{
+  text-align: center;
+  color: black;
+  font-size: 2.5em;
+}
+.titre2{
+  text-align: center;
+  color: black;
+  font-size: 1.5em;
+}
 .projects h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
@@ -33,6 +42,7 @@ body {
   align-items: flex-start;
   gap: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
 }
 
 .project-card:hover {
@@ -49,11 +59,12 @@ body {
 
 .project-card img {
   flex: 1;
-  max-width: 40%; /* Limite la largeur de l'image */
+  max-width: 50%; /* Limite la largeur de l'image */
   height: auto;
   border-radius: 10px;
   object-fit: cover;
   order: 2; /* Image après le contenu */
+  margin-top: 85px;
 }
 
 /* Titre et texte du projet */
@@ -67,11 +78,12 @@ body {
 }
 
 .project-card p {
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: white;
   line-height: 1.4;
   margin: 10px 0;
   width: auto;
+  background: black
 }
 
 /* Bouton */
@@ -100,8 +112,12 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .p-formation {
+    font-size: 1.3rem;
+  }
   .project-card {
     flex-direction: column; /* Empile les éléments verticalement */
+    width: 75%;
   }
 
   .project-content {

@@ -8,7 +8,7 @@ const About = () => (
     
     <h1>À propos de moi</h1>
     <img src={myPhoto} alt="myphoto" className="myPhoto" />
-    <p className= "background-about">
+    <p className= "background-about size-text">
     Je suis une personne polyvalente, passionnée par le développement et toujours en quête d'excellence.<br />
 Au fil de <strong>mes expériences</strong>, j'ai exploré divers aspects du développement web, que ce soit en <strong>création d'interfaces dynamiques</strong> avec <strong>React</strong> ou en <strong>développement d'APIs robustes</strong> avec <strong>Node.js</strong>.<br />
 

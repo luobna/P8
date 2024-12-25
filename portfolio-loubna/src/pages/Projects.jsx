@@ -5,7 +5,10 @@ import "../Style/Projects.scss";
 const ProjectsPage = () => {
   return (
     <div className="other-pages">
-      <div className="projects">
+       <h1 className="titre1">Ma formation</h1>
+       <h2 className="titre2">Formation Développeur Web - OpenClassrooms</h2>
+       <p className="p-formation"> Au cours de ma formation chez OpenClassrooms, j'ai acquis des compétences solides en développement web à travers des projets concrets et variés. Cette formation m'a permis de maîtriser les bases du développement web (HTML, CSS, JavaScript) ainsi que des technologies avancées comme React pour le frontend et Node.js pour le backend. Voici un aperçu des projets que j'ai réalisés :</p>
+      <div className="projects">  
         <h1>Mes Projets</h1>
         <div className="projects-container">
           {projects.map((project, index) => (
