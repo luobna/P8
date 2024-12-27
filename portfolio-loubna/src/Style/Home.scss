@@ -1,92 +1,156 @@
-.home {
-    position: relative;
-    height: 100vh; /* Utiliser toute la hauteur de l'écran */
-    width: 100%; /* Prendre toute la largeur */
-    overflow: hidden; /* Empêcher tout débordement */
-  }
-  
-  .backgroundHome {
-    background-image: url("../assets/images/img.jpg"); /* Chemin de l'image */
-    background-size: cover; /* L'image couvre toute la taille de l'écran */
-    background-position: center; /* Centrer l'image */
-    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
-    height: 100%; /* Prendre toute la hauteur */
-    width: 100%; /* Prendre toute la largeur */
-    position: absolute; /* Positionner l'image en arrière-plan */
-    top: 0; /* En haut de la page */
-    left: 0; /* À gauche de la page */
-    z-index: -1; /* Placer l'image derrière le contenu */
+/* =============================== */
+/* Global Styles (CSS Reset) */
+/* =============================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Inclut les marges et bordures dans la taille des éléments */
+}
 
-    filter: none;
-    opacity: 1;
-      filter: contrast(1.1); /* Améliore légèrement le contraste */
-
-  }
-  
-  .content {
-    position: relative; /* Placer le contenu au-dessus de l'image */
-    z-index: 1; /* Assurer que le contenu est au-dessus de l'image */
-    text-align: center;
-    color: white; /* Texte en blanc */
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  
-  p {
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center; /* Centrer le texte */
-    color: #f1f1f1; /* Couleur claire pour contraster avec le fond */
-    font-size: 1.5rem; /* Taille de police adaptée */
-    font-weight: 400; /* Légèrement en gras pour une meilleure lisibilité */
-    line-height: 1.8; /* Espacement entre les lignes */
-    margin: 20px auto; /* Espacement en haut et en bas */
-    width: 45%; /* Réduction de la largeur pour une meilleure lecture */
-    background: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
-    padding: 15px 20px; /* Espacement interne */
-    border-radius: 30px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre subtile */
-  }
-  
-  .profile-photo {
-    width: 200px;
-    height: 190px;
-    border-radius: 50%;
-    margin-top: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  }
-
-
-
-
-
-  /* CSS global pour html et body */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
+  font-family: Arial, sans-serif;
 }
 
-/* Conteneur principal de l'application */
 .page {
-  min-height: 100vh; /* Le contenu doit au moins remplir toute la hauteur de l'écran */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Le conteneur pour Routes doit grandir si nécessaire */
 .page main {
-  flex: 1; /* Permet au contenu de prendre tout l'espace restant */
+  flex: 1;
 }
 
-/* Footer reste en bas */
 footer {
-  margin-top: auto; /* Positionne le footer en bas */
+  margin-top: auto;
 }
 
-  
+/* =============================== */
+/* Section principale - .home */
+/* =============================== */
+.home {
+  position: relative;
+  min-height: 100vh; /* Utiliser min-height pour éviter le débordement */
+  width: 100%;
+  overflow: hidden; /* Empêcher tout débordement */
+}
+
+.backgroundHome {
+  background-image: url("../assets/images/img.jpg"); /* Chemin de l'image */
+  background-size: cover; /* L'image couvre toute la taille de l'écran */
+  background-position: center center; /* Centrer l'image de manière plus précise */
+  background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+  min-height: 100%; /* Prendre toute la hauteur de l'écran */
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: contrast(1.1); /* Améliore légèrement le contraste */
+  opacity: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 6vw;  /* Taille dynamique en fonction de la largeur de l'écran */
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ajout d'une ombre pour la lisibilité */
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  color: #f1f1f1;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.8;
+  margin: 20px auto;
+  width: 45%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-photo {
+  width: 15vw; /* Taille dynamique en fonction de la largeur de l'écran */
+  height: 15vw;
+  border-radius: 50%;
+  margin-top: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease; /* Animation pour la photo de profil */
+}
+
+.profile-photo:hover {
+  transform: scale(1.1); /* Effet zoom au survol */
+}
+
+/* =============================== */
+/* MEDIA QUERIES (Responsive) */
+/* =============================== */
+
+/* Mobile (moins de 600px) */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 7vw; /* Ajuster la taille du titre sur mobile */
+  }
+
+  p {
+    font-size: 1.2rem;
+    width: 90%; /* Augmenter la largeur du texte sur mobile */
+    margin: 10px auto;
+  }
+
+  .profile-photo {
+    width: 40vw; /* Réduire la taille de l'image de profil sur mobile */
+    height: 40vw;
+  }
+}
+
+/* Tablette (600px à 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  h1 {
+    font-size: 5vw; /* Ajuster la taille du titre sur tablette */
+  }
+
+  p {
+    font-size: 1.3rem;
+    width: 70%;
+    margin: 15px auto;
+  }
+
+  .profile-photo {
+    width: 12vw; /* Ajuster la taille de l'image de profil sur tablette */
+    height: 12vw;
+  }
+}
+
+/* Bureau (plus de 1024px) */
+@media (min-width: 1025px) {
+  h1 {
+    font-size: 3rem; /* Taille normale du titre sur bureau */
+  }
+
+  p {
+    font-size: 1.5rem;
+    width: 45%;
+  }
+
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+  }
+}
